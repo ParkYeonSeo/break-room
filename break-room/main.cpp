@@ -13,17 +13,16 @@ void end();
 
 int main(void)
 {
-    create_window(1080, 720);
-    while (!is_window_closed())
-    {
-        start();
+    create_window(1080, 560);
+  
+    start();
 
-        game1();
-        game2();
-        game3();
+    game1();
+    game2();
+    game3();
 
-        end();
-    }
+    end();
+
     return 0;
 }
 
