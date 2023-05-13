@@ -1,52 +1,39 @@
 #include <iostream>
 #include <Windows.h>
-#include <doodle/doodle.hpp>
+#include <doodle/doodle.hpp>    
+
+#include "scene0.h"
+#include "scene1.h"
+#include "scene2.h"
+#include "scene3.h"
 
 using namespace doodle;
 
-void game1();
-void game2();
-void game3();
-
-void start();
-void end();
+void logic();
 
 int main(void)
 {
-    create_window(1080, 560);
-  
-    start();
+    create_window(1080, 720);
+    int stage_num = 0;
 
-    game1();
-    game2();
-    game3();
+    while (!is_window_closed()) {
 
-    end();
+        update_window();
+        clear_background(HexColor{ 0xFFFFFFFF });
 
-    return 0;
-}
+        logic();
 
-void game1()
-{
-
-}
-
-void game2()
-{
-
-}
-
-void game3()
-{
-
-}
-
-void start()
-{
-
-}
-
-void end()
-{
-
+        switch (stage_num) {
+        case 0:
+            //오프닝
+        case 1:
+            //벽돌깨기
+            break;
+        case 2:
+            //보물찾기
+            break;
+        case 3:
+            //가위바위보
+        }
+    }
 }
