@@ -1,6 +1,4 @@
-#include <iostream>
-#include <Windows.h>
-#include <doodle/doodle.hpp>    
+#include "stdafx.h"
 
 #include "scene0.h"
 #include "scene1.h"
@@ -9,23 +7,26 @@
 
 using namespace doodle;
 
-void logic();
 
-int main(void)
+
+int main()
 {
     create_window(1080, 720);
     int stage_num = 0;
-
+    scene0 c0;
+    c0.init();
     while (!is_window_closed()) {
 
         update_window();
         clear_background(HexColor{ 0xFFFFFFFF });
 
-        logic();
+      
 
         switch (stage_num) {
-        case 0:
-            //¿ÀÇÁ´×
+        case 0://¿ÀÇÁ´×
+            c0.logic();
+            c0.draw();
+            break;
         case 1:
             //º®µ¹±ú±â
             break;
@@ -34,6 +35,7 @@ int main(void)
             break;
         case 3:
             //°¡À§¹ÙÀ§º¸
+            break;
         }
     }
 }
