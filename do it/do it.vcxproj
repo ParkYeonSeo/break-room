@@ -18,27 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="scene0.cpp" />
-    <ClCompile Include="scene1.cpp" />
-    <ClCompile Include="scene2.cpp" />
-    <ClCompile Include="scene3.cpp" />
-    <ClCompile Include="가위바위보.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="scene0.h" />
-    <ClInclude Include="scene1.h" />
-    <ClInclude Include="scene2.h" />
-    <ClInclude Include="scene3.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="가위바위보.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{567daaa6-60e3-4dc9-938e-7ab439cfe602}</ProjectGuid>
-    <RootNamespace>breakroom</RootNamespace>
+    <ProjectGuid>{a5171783-20da-4847-99be-82bae92f753b}</ProjectGuid>
+    <RootNamespace>doit</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,6 +126,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dodoit.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
