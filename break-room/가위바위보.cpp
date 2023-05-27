@@ -22,7 +22,12 @@ void stage3::init()
 
 	heart = Image("./Resource/heart.png");
 	deadheart = Image("./Resource/deadheart.png");
+
+	_ending = Image("./Resource/3.png");
+	_maker = Image("./Resource/4.png");
+	_dead = Image("./Resource/1.png");
 }
+
 void stage3::getheart(int p)
 {
 	hp = p;
@@ -50,7 +55,12 @@ void stage3::logic()
 				hp--;
 				break;
 			}
-			_game_state = 2;
+			if (hp == 0) {
+				_game_state = 5;
+			}
+			else {
+				_game_state = 2;
+			}
 			break;
 		case 2:
 
@@ -60,10 +70,26 @@ void stage3::logic()
 			case 0: case 2:
 				_game_state = 0;
 				break;
+			case 1:
+				
+				_game_state = 3;
+				std::cout << _game_state << std::endl;
+				break;
 			}
 			break;
+
 		}
 		
+	}
+	if (_game_state == 3) {
+		if (prev_time == 0.0) {
+			prev_time = time;
+		}
+
+		if ((time - prev_time) > 3) {
+			_game_state = 4;
+			prev_time = 0.0;
+		}
 	}
 	time += DeltaTime;
 
@@ -71,7 +97,7 @@ void stage3::logic()
 void stage3::draw()
 {
 	if (time < 5) {//비교하는 수는 몇초기다릴지임
-		
+
 		draw_image(_hi, -300, -360, 600, 650);
 	}
 	else {
@@ -86,7 +112,14 @@ void stage3::draw()
 			draw_image(_bi[_my_select], -300, -330, 600, 650);
 			break;
 		case 3:
-
+			draw_image(_ending, -300, -330, 600, 650);
+			break;
+		case 4:
+			draw_image(_maker, -300, -330, 600, 650);
+			break;
+		case 5:
+			draw_image(_dead, -300, -330, 600, 650);
+			break;
 		}
 	}
 	for (int i = 0; i < 5; ++i) {

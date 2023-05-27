@@ -21,8 +21,6 @@ int main()
 
     stage3 s0;
     s0.init();
-    stage3 s1;
-    s1.init();
 
     while (!is_window_closed()) {
 
