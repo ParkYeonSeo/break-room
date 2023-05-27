@@ -25,6 +25,7 @@
     <ClCompile Include="scene2.cpp" />
     <ClCompile Include="scene3.cpp" />
     <ClCompile Include="가위바위보.cpp" />
+    <ClCompile Include="보물찾기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scene0.h" />
@@ -33,6 +34,7 @@
     <ClInclude Include="scene3.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="가위바위보.h" />
+    <ClInclude Include="보물찾기.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
