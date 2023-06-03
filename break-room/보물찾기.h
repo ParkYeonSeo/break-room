@@ -47,4 +47,3 @@ public:
 	void logic();
 	void end();
 };
-

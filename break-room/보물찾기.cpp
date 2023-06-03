@@ -19,6 +19,7 @@ void stage2::init()
 {
     //세팅{
     srand((unsigned int)time(NULL));
+    num = rand() % 2 + 1;
 
     num = rand() % 2 + 1;
     //이미지
