@@ -3,22 +3,24 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <Windows.h>
+#define dead_hp 5
 using namespace doodle;
 using namespace std;
 
 #include "보물찾기.h"
 
 //라이프 위치 and 개수
-extern int heart_x = -560;
-extern int heart_y = 280;
-extern int hp = 5;
-extern int dead_hp = 5;
-
+extern int heart_x;
+extern int heart_y;
+extern int hp;
+extern int stage_num;
 void stage2::init()
 {
     //세팅{
     srand((unsigned int)time(NULL));
 
+    num = rand() % 2 + 1;
     //이미지
     stage2 = Image{ "./Resource/stage2.png" };
     door = Image{ "./Resource/door.png" };
@@ -54,6 +56,7 @@ void stage2::init()
 
 void stage2::draw()
 {
+    set_image_mode(RectMode::Center);
     //시작
     if (page == 0) {
         clear_background(255, 255, 255);
@@ -94,14 +97,6 @@ void stage2::draw()
         }
     }
 
-    //퀴즈 통과
-    if (page == 2.1) {
-        clear_background(255, 255, 255);
-        draw_image(girl, -150, -40, 500, 500);
-        draw_image(boss, 150, -40, 400, 520);
-        draw_image(Pass, 240, 205, 180, 160);
-    }
-
     //퀴즈 실패
     if (page == 2.2) {
         clear_background(255, 255, 255);
@@ -133,8 +128,8 @@ void stage2::logic()
     //시작
     if (page == 0) {
         if (MouseIsPressed) {
-            float mx = get_mouse_x();
-            float my = get_mouse_y();
+            int mx = get_mouse_x();
+            int my = get_mouse_y();
 
             if (mx > -90 && mx < 90 && my < -70 && my > -120) {
                 page = 1;
@@ -191,7 +186,7 @@ void stage2::logic()
 
     //퀴즈 통과
     if (page == 2.1) {
-        //다음라운드 넘어가기 작성
+        end();
     }
 
     //퀴즈 실패
@@ -225,6 +220,18 @@ void stage2::logic()
 
 void stage2::end()
 {
+    //다음라운드 넘어가기 작성
+    clear_background(255, 255, 255);
+    draw_image(girl, -150, -40, 500, 500);
+    draw_image(boss, 150, -40, 400, 520);
+    draw_image(Pass, 240, 205, 180, 160);
 
+    
+    timer += DeltaTime;
+    if (timer > 2) {
 
+        stage_num++;
+    }
+
+    
 }

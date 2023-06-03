@@ -19,19 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="asdf.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="scene0.cpp" />
-    <ClCompile Include="scene1.cpp" />
-    <ClCompile Include="scene2.cpp" />
-    <ClCompile Include="scene3.cpp" />
     <ClCompile Include="가위바위보.cpp" />
     <ClCompile Include="보물찾기.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="asdf.h" />
     <ClInclude Include="scene0.h" />
-    <ClInclude Include="scene1.h" />
-    <ClInclude Include="scene2.h" />
-    <ClInclude Include="scene3.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="가위바위보.h" />
     <ClInclude Include="보물찾기.h" />

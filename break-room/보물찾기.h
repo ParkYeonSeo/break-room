@@ -9,7 +9,7 @@ public:
     bool toggle = true;
 
     //퀴즈 종류(2개)
-    int num = rand() % 2 + 1;
+    int num;
 
     //이미지
     Image stage2;

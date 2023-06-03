@@ -3,7 +3,7 @@
 #include "가위바위보.h"
 using namespace doodle;
 
-
+extern int hp;
 void stage3::init()
 {
 	_hi = Image("./Resource/001.png");
@@ -28,10 +28,7 @@ void stage3::init()
 	_dead = Image("./Resource/1.png");
 }
 
-void stage3::getheart(int p)
-{
-	hp = p;
-}
+
 void stage3::logic()
 {
 	//왼쪽
@@ -96,6 +93,7 @@ void stage3::logic()
 }
 void stage3::draw()
 {
+	set_image_mode(RectMode::Corner);
 	if (time < 5) {//비교하는 수는 몇초기다릴지임
 
 		draw_image(_hi, -300, -360, 600, 650);
@@ -122,6 +120,7 @@ void stage3::draw()
 			break;
 		}
 	}
+	set_image_mode(RectMode::Center);
 	for (int i = 0; i < 5; ++i) {
 		draw_image(deadheart, heart_x + i * 45, heart_y, 40, 40);
 	}
