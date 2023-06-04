@@ -21,7 +21,6 @@ void stage2::init()
     srand((unsigned int)time(NULL));
     num = rand() % 2 + 1;
 
-    num = rand() % 2 + 1;
     //ÀÌ¹ÌÁö
     stage2 = Image{ "./Resource/stage2.png" };
     door = Image{ "./Resource/door.png" };
