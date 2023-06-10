@@ -11,7 +11,7 @@ using namespace doodle;
 int heart_x = -560;
 int heart_y = 280;
 int hp = 5;
-int stage_num = 1;
+int stage_num =3;
 
 int main()
 {
