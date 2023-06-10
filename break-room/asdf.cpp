@@ -10,7 +10,7 @@ void stage1::draw() {
     set_image_mode(RectMode::Center);
     draw_image(stick, stick_x, stick_y, 200, 100);
     draw_image(block, 0, 280, 400, 150);
-    draw_image(o, ox, oy, 25, 25);
+    draw_image(key, ox, oy, 30, 30);
 
     for (int i = 0; i < 5; ++i) {
         draw_image(deadheart, heart_x + i * 45, heart_y, 40, 40);
@@ -19,11 +19,11 @@ void stage1::draw() {
         draw_image(heart, heart_x + i * 45, heart_y, 40, 40);
     }
     for (int i = 0; i < cnt; ++i) {
-        draw_image(o, -580 + i * 25, 220, 20, 20);
+        draw_image(key, -580 + i * 25, 220, 25, 25);
     }
 
     for (int i = 0; i < ball_cnt; ++i) {
-        draw_image(ball, ball_x[i], ball_y[i], 25, 25);
+        draw_image(ball, ball_x[i], ball_y[i], 40, 40);
     }
 }
 void stage1::logic() {

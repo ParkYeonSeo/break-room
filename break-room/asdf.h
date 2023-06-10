@@ -35,6 +35,6 @@ public:
     const Image block{ "./Resource/brick.png" };
     const Image heart{ "./Resource/heart.png" };
     const Image deadheart{ "./Resource/deadheart.png" };
-    const Image o{ "./Resource/o.png" };
+    const Image key{ "./Resource/key.png" };
 
 };
