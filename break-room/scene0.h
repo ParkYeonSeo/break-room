@@ -1,16 +1,15 @@
 #pragma once
 class scene0
 {
-private:
-	Image _button[4];
-	POINT _location[4];//위치정보
-	POINT _look_vector[4];//방향정보
-	float _move_speed = 4.f;
-
+	int st = 0;
 public:
-	void init();
-	void logic();
-	void draw();
-	void destroy();
+	void opening();
+	const Image a{ "./Resource/11.png" };
+	const Image b{ "./Resource/22.png" };
+	const Image c{ "./Resource/33.png" };
+	const Image d{ "./Resource/34.png" };
+	const Image e{ "./Resource/35.png" };
+
+	int up() { return st; }
 };
 

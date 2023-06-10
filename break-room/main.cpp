@@ -12,14 +12,15 @@ int heart_x = -560;
 int heart_y = 280;
 int hp = 5;
 
-int stage_num = 3;
+int stage_num =0;
+
 
 int main()
 {
     create_window(1200, 600);
 
     scene0 s0; //¿ÀÇÁ´×
-    s0.init();
+    
 
     stage1 s1; //º®µ¹±ú±â
 
@@ -40,8 +41,9 @@ int main()
         switch (stage_num) {
         case 0:
             //¿ÀÇÁ´×
-            s0.logic();
-            s0.draw();
+            s0.opening();
+            stage_num += s0.up();
+            
             break;
         case 1:
             s1.logic();
@@ -58,6 +60,6 @@ int main()
             s3.draw();
             break;
             //°¡À§¹ÙÀ§º¸
-        }
+        } 
     }
 }

@@ -7,6 +7,7 @@ extern int hp;
 extern int stage_num;
 
 void stage1::draw() {
+    set_image_mode(RectMode::Center);
     draw_image(stick, stick_x, stick_y, 200, 100);
     draw_image(block, 0, 280, 400, 150);
     draw_image(o, ox, oy, 25, 25);
@@ -26,6 +27,9 @@ void stage1::draw() {
     }
 }
 void stage1::logic() {
+    if (cnt == 10) {
+        end();
+    }
     if (hp == 0) {
         clear_background(255, 255, 255);
         draw_image(game_over, 0, 0, 310, 170);
@@ -104,10 +108,6 @@ void stage1::logic() {
             ball_y[i] = 300;
             --hp;
         }
-    }
-
-    if (cnt == 10) {
-        end();
     }
 }
 
