@@ -78,7 +78,7 @@ void stage2::draw()
 
         //ДыБо1
         if (num == 1) {
-            draw_image(Quiz1, 0, 200, 800, 123);
+            draw_image(Quiz1, 0, 200, 800, 159);
             draw_image(Quiz1_1, -420, 90, 70, 58);
             draw_image(Quiz1_2, -210, 90, 55, 40);
             draw_image(Quiz1_3, 0, 90, 65, 50);
