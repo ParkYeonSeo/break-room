@@ -9,7 +9,6 @@ extern int stage_num;
 void stage1::draw() {
     set_image_mode(RectMode::Center);
     draw_image(stick, stick_x, stick_y, 200, 100);
-    draw_image(block, 0, 280, 400, 150);
     draw_image(key, ox, oy, 30, 30);
 
     for (int i = 0; i < 5; ++i) {

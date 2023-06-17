@@ -31,8 +31,7 @@ public:
     void end();
     const Image game_over{ "./Resource/GAME OVER.png" };
     const Image ball{ "./Resource/ball.png" };
-    const Image stick{ "./Resource/brick.png" };
-    const Image block{ "./Resource/brick.png" };
+    const Image stick{ "./Resource/wn.png" };
     const Image heart{ "./Resource/heart.png" };
     const Image deadheart{ "./Resource/deadheart.png" };
     const Image key{ "./Resource/key.png" };
