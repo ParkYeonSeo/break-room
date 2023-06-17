@@ -24,31 +24,33 @@ void scene0::opening() {
 			draw_image(b, -300, -330, 600, 650);
 			
 			break;
-		
 		case 2:
-			draw_image(d, -300, -330, 600, 650);
+			draw_image(c, -300, -330, 600, 650);
 			break;
 		case 3:
-			draw_image(e, -300, -330, 600, 650);
+			draw_image(d, -300, -330, 600, 650);
 			break;
 		case 4:
+			draw_image(e, -300, -330, 600, 650);
+			break;
+		case 5:
 			draw_image(f, -600, -330, 600, 650);
 			draw_image(g, 0, -330, 600, 650);
 			if (MouseIsPressed) {
 				if (get_mouse_x() > 0) {
-					img_num = 6;
+					img_num = 7;
 					
 				}
 				else {
-					img_num = 5;
+					img_num = 6;
 					
 				}
 			}
 			break;
-		case 5:
+		case 6:
 			draw_image(j, -300, -330, 600, 650);
 			break;
-		case 6:
+		case 7:
 			draw_image(h, -300, -330, 600, 650);
 			break;
 
@@ -56,10 +58,10 @@ void scene0::opening() {
 		
 		
 
-		if (GetAsyncKeyState(VK_RETURN) & 0x0001 && img_num < 4) {
+		if (GetAsyncKeyState(VK_RETURN) & 0x0001 && img_num < 5) {
 			img_num++;
 		}
-		if (GetAsyncKeyState(VK_RETURN) & 0x8000 && img_num == 5) {
+		if (GetAsyncKeyState(VK_RETURN) & 0x8000 && img_num == 6) {
 			stage_num++;
 			break;
 		}

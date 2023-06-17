@@ -6,6 +6,7 @@ public:
 	void opening();
 	const Image a{ "./Resource/11.png" };
 	const Image b{ "./Resource/22.png" };
+	const Image c{ "./Resource/23.png" };
 	const Image d{ "./Resource/34.png" };
 	const Image e{ "./Resource/35.png" };
 	const Image f{ "./Resource/save.png" };

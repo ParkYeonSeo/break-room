@@ -26,7 +26,7 @@ void stage1::draw() {
     }
 }
 void stage1::logic() {
-    if (cnt == 10) {
+    if (cnt == 10) { 
         end();
     }
     if (hp == 0) {
