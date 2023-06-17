@@ -14,6 +14,7 @@ public:
 	const Image h{ "./Resource/38.png" };
 	const Image i{ "./Resource/39.png" };
 	const Image j{ "./Resource/40.png" };
+	const Image k{ "./Resource/41.png" };
 	int up() { return st; }
 };
 

@@ -38,33 +38,42 @@ void scene0::opening() {
 			draw_image(g, 0, -330, 600, 650);
 			if (MouseIsPressed) {
 				if (get_mouse_x() > 0) {
-					img_num = 7;
-					
+					img_num = 8;
 				}
 				else {
 					img_num = 6;
-					
 				}
 			}
 			break;
 		case 6:
 			draw_image(j, -300, -330, 600, 650);
 			break;
+
 		case 7:
+			draw_image(k, -300, -330, 600, 650);
+			break;
+
+		case 8:
 			draw_image(h, -300, -330, 600, 650);
 			break;
 
+		case 9:
+			draw_image(i, -300, -330, 600, 650);
+			break;
 		}
 		
 		
 
-		if (GetAsyncKeyState(VK_RETURN) & 0x0001 && img_num < 5) {
-			img_num++;
+		if (GetAsyncKeyState(VK_RETURN) & 0x0001) {
+			if(img_num < 5) img_num++;
+			if (img_num == 7) {
+				stage_num++;
+				break;
+			}
+			if (img_num == 6) img_num = 7;
+			if (img_num == 8) img_num = 9;
 		}
-		if (GetAsyncKeyState(VK_RETURN) & 0x8000 && img_num == 6) {
-			stage_num++;
-			break;
-		}
+		
 	}
 	
 
