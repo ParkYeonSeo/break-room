@@ -31,7 +31,7 @@ void stage1::logic() {
     }
     if (hp == 0) {
         clear_background(255, 255, 255);
-        draw_image(game_over, 0, 0, 310, 170);
+        draw_image(game_over, 0, 0, 600, 650);
         return;
     }
     timer += DeltaTime;
