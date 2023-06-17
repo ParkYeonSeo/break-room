@@ -12,7 +12,7 @@ int heart_x = -560;
 int heart_y = 280;
 int hp = 5;
 
-int stage_num = 2;
+int stage_num = 0;
 
 int main()
 {
@@ -41,8 +41,6 @@ int main()
         case 0:
             //¿ÀÇÁ´×
             s0.opening();
-            stage_num += s0.up();
-            
             break;
         case 1:
             s1.logic();
