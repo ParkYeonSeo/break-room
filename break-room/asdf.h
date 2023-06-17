@@ -29,7 +29,7 @@ public:
     void draw();
     void logic();
     void end();
-    const Image game_over{ "./Resource/GAME OVER.png" };
+    const Image game_over{ "./Resource/1.png" };
     const Image ball{ "./Resource/ball.png" };
     const Image stick{ "./Resource/wn.png" };
     const Image heart{ "./Resource/heart.png" };
