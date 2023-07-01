@@ -1,6 +1,7 @@
 #pragma once
 #define ball_cnt 6
-#define s_speed 20
+#define s_speed 30
+#define g_speed 500
 class stage1 {
 public:
 
@@ -19,8 +20,8 @@ public:
     int e = 0;
 
     int cnt = -1;
-    int x[ball_cnt] = { 10,-10,10,-10,-10,10 };
-    int y[ball_cnt] = { 10,10,-10,10,-10,-10 };
+    int x[ball_cnt] = { 1*g_speed,-1 * g_speed,1 * g_speed,-1 * g_speed,-1 * g_speed,1 * g_speed };
+    int y[ball_cnt] = { 1 * g_speed,1 * g_speed,-1 * g_speed,1 * g_speed,-1 * g_speed,-1 * g_speed };
 
 
     RECT ZONE{ 0,-300,300,600 };

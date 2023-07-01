@@ -91,8 +91,8 @@ void stage1::logic() {
     }
 
     for (int i = 0; i < ball_cnt; ++i) {
-        ball_y[i] -= y[i];
-        ball_x[i] -= x[i];
+        ball_y[i] -= y[i] * DeltaTime;
+        ball_x[i] -= x[i] * DeltaTime;
 
         if (abs(ball_y[i]) >= 300) {
             y[i] *= -1;
@@ -102,7 +102,7 @@ void stage1::logic() {
         }
 
         if ((ball_y[i] > stick_y - 40 && ball_y[i] < stick_y + 40) && (ball_x[i] > stick_x - 60 && ball_x[i] < stick_x + 60)) {
-            y[i] = 10;
+            y[i] = g_speed*1;
             ball_x[i] = rand() % 300;
             ball_y[i] = 300;
             --hp;
