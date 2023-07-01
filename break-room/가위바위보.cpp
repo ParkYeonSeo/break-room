@@ -107,7 +107,7 @@ void stage3::draw()
 			draw_image(_result[_my_select], -300, -330, 600, 650);
 			break;
 		case 2:
-			draw_image(_bi[_my_select], -300, -330, 600, 650);
+			draw_image(_bi[_my_select], -300, -300, 600, 650);
 			break;
 		case 3:
 			draw_image(_ending, -300, -330, 600, 650);
@@ -116,7 +116,7 @@ void stage3::draw()
 			draw_image(_maker, -300, -330, 600, 650);
 			break;
 		case 5:
-			draw_image(_dead, -300, -330, 600, 650);
+			draw_image(_dead, -300, -300, 600, 650);
 			break;
 		}
 	}

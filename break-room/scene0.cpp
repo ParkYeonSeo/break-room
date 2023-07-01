@@ -54,7 +54,7 @@ void scene0::opening() {
 			break;
 
 		case 8:
-			draw_image(h, -300, -330, 600, 650);
+			draw_image(h, -300, -300, 600, 630);
 			break;
 
 		case 9:

@@ -1,7 +1,7 @@
 #pragma once
 #define ball_cnt 6
-#define s_speed 30
-#define g_speed 500
+#define s_speed 5
+#define g_speed 200
 class stage1 {
 public:
 

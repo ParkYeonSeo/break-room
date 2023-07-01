@@ -26,12 +26,12 @@ void stage1::draw() {
     }
 }
 void stage1::logic() {
-    if (cnt == 10) { 
+    if (cnt == 5) { 
         end();
     }
     if (hp == 0) {
         clear_background(255, 255, 255);
-        draw_image(game_over, 0, 0, 600, 650);
+        draw_image(game_over, 0, 0, 590, 570);
         return;
     }
     timer += DeltaTime;
